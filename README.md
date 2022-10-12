@@ -12,7 +12,7 @@ You need to download the following data to start the experiment:
 
 - [EgoBody](https://github.com/sanweiliti/EgoBody) dataset 
 - Some essential data from [SPIN](https://github.com/nkolot/SPIN) (in the data folder)
-- Pre-trained model from [EFT](https://github.com/nkolot/SPIN)
+- Pre-trained model from [EFT](https://github.com/facebookresearch/eft)
 
 Then you need to specify their paths in config.py.
 
