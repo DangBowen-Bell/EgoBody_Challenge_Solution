@@ -87,7 +87,7 @@ class BaseTrainer(object):
                     tqdm.write('Checkpoint saved')
                     sys.exit(0)
                 
-                break
+                # break
 
             # load a checkpoint only on startup, for the next epochs
             # just iterate over the dataset as usual

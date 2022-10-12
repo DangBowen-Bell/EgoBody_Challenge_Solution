@@ -19,7 +19,7 @@ Then you need to specify their paths in config.py.
 You also need to generate the 2D keypoints for calculating 2D joint loss by running:
 
 ```
-python save_keypoints_2d.py
+python keypoints.py
 ```
 
 The generated 2D keypoints data will save as .npy file for easy loading.
