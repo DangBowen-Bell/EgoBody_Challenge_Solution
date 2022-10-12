@@ -1,4 +1,4 @@
-Code repository for the solution of the [EgoBody Challenge](https://codalab.lisn.upsaclay.fr/competitions/6351#learn_the_details).
+Code repository for our solution to the [EgoBody Challenge](https://codalab.lisn.upsaclay.fr/competitions/6351#learn_the_details).
 
 In this repository, we explore some effective data augmentations to improve the model generalization of 3D human pose and shape estimation from a single egocentric image. 
 
