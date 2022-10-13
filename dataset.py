@@ -210,8 +210,8 @@ class EgoSetDataset(Dataset):
             if self.options.cutout_factor > 0:
                 co = np.random.uniform(0, self.options.cutout_factor)
 
-            if self.options.use_blur:
-                blur = np.random.randint(8)
+            if self.options.use_blur and np.random.uniform() <= 0.1:
+                blur = np.random.randint(4)
                 blur_size = np.random.randint(len(constants.BLUR_SIZES))
                 blur_size = constants.BLUR_SIZES[blur_size]
 
@@ -282,8 +282,8 @@ class EgoSetDataset(Dataset):
         # ox = 0
         # oy = 0
 
-        # center[0] += ox
-        # center[1] += oy
+        center[0] += ox
+        center[1] += oy
         
         # Load image
         img_path = self.img_paths[index]

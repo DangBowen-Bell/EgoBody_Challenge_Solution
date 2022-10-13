@@ -192,17 +192,12 @@ def cutout(img, kp, v):
 
     return np.array(img), kp
 
-def motion_blur(img, blur, kernel_size=5):
+def motion_blur(img, blur, kernel_size=3):
     kernel_1 = np.zeros((kernel_size, kernel_size))
     kernel_1[kernel_size // 2, :] = 1 / kernel_size
     kernel_2 = kernel_1.T
     kernel_3 = np.eye(kernel_size) / kernel_size
     kernel_4 = np.flip(kernel_3, 0)
-    kernel_5 = np.zeros((kernel_size, kernel_size))
-    kernel_5[kernel_size // 2, kernel_size // 2] = 1
-    kernels = [kernel_1, kernel_2, kernel_3, kernel_4, 
-               kernel_5, kernel_5, kernel_5, kernel_5]
-
+    kernels = [kernel_1, kernel_2, kernel_3, kernel_4]
     blur_img = cv2.filter2D(img, -1, kernels[blur])
-
     return blur_img

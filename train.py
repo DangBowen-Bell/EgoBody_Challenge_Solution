@@ -356,9 +356,9 @@ class Trainer(BaseTrainer):
             # Get ground truth annotations from the batch
             gt_pose = batch['pose'].to(self.device)
             gt_betas = batch['betas'].to(self.device)
-            gt_output = self.smpl(betas=gt_betas, 
-                                  body_pose=gt_pose[:, 3:], 
-                                  global_orient=gt_pose[:, :3])
+            gt_output = self.smpl_eval(betas=gt_betas, 
+                                       body_pose=gt_pose[:, 3:], 
+                                       global_orient=gt_pose[:, :3])
             gt_joints = gt_output.joints[:, :24]
             gt_vertices = gt_output.vertices
 
