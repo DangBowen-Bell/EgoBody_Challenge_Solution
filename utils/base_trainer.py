@@ -100,8 +100,9 @@ class BaseTrainer(object):
             checkpoint_path = self.saver.save_checkpoint(self.models_dict, self.optimizers_dict, epoch+1, 0, self.options.batch_size, None, self.step_count)
 
             self.submission_path = checkpoint_path[:-2] + 'json'
-            # Eval
-            self.eval()
+            # The evaluation result is a little different from challenge website
+            if self.options.eval:
+                self.eval()
         return
 
     # The following methods (with the possible exception of test) have to be implemented in the derived classes

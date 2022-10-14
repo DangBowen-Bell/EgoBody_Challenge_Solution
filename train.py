@@ -398,9 +398,6 @@ class Trainer(BaseTrainer):
                     'betas': [pred_betas[i].cpu().numpy().tolist()]
                 }
 
-            # if step == cnt-1:
-            #     break
-
         print(self.submission_path)
         print('MPJPE: ' + str(1000 * mpjpe.mean()))
         print('PA-MPJPE: ' + str(1000 * pa_mpjpe.mean()))

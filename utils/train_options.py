@@ -65,6 +65,7 @@ class TrainOptions():
         train.add_argument('--use_wpp', default=True, action='store_true', help='')
         train.add_argument('--use_op', default=False, action='store_true', help='')
         train.add_argument('--use_offset', default=False, action='store_true', help='')
+        train.add_argument('--eval', default=False, action='store_true', help='')
 
         shuffle_train = train.add_mutually_exclusive_group()
         shuffle_train.add_argument('--shuffle_train', dest='shuffle_train', action='store_true', help='Shuffle training data')

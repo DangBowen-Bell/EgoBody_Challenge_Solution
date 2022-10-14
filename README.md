@@ -14,7 +14,7 @@ You need to download the following data to start the experiment:
 - Some essential data from [SPIN](https://github.com/nkolot/SPIN) (in the data folder)
 - Pre-trained model from [EFT](https://github.com/facebookresearch/eft)
 
-Then you need to specify their paths in config.py.
+Then you need to specify their paths in ```config.py```.
 
 You also need to generate the 2D keypoints for calculating 2D joint loss by running:
 
@@ -32,10 +32,11 @@ You can train on the EgoBody dataset using pre-trained model by running:
 python train.py --name exp_name --pretrained_checkpoint=/path/to/pre-tained/model.pt
 ```
 
-The checkpoints, tensorboard files, and evaluation results on the test set will be saved in the logs directory by default.
+The checkpoints and tensorboard files will be saved in the ```logs``` directory by default.
 
-Please refer to the train_options.py for adding more data augmentations and setting other parameters.
+Please refer to the ```train_options.py``` for adding more data augmentations and setting other parameters.
 
+You can download our best model [here](https://drive.google.com/file/d/1gBMyJkhMqlBGyUe7GA2NS6Jbz-XxYdTv/view?usp=sharing).
 
 ## Reference
 The majority of this repository is borrowed from [SPIN](https://github.com/nkolot/SPIN). We also use some functions from [EFT](https://github.com/facebookresearch/eft) and [EgoBody](https://github.com/sanweiliti/EgoBody). Thank these authors for their great work.
