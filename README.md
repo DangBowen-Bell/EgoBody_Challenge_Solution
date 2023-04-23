@@ -1,4 +1,8 @@
-Code repository for our solution to the [EgoBody Challenge](https://codalab.lisn.upsaclay.fr/competitions/6351#learn_the_details).
+# 3D Human Reconstruction
+
+
+
+Code repository for our solution to the [EgoBody Challenge](https://codalab.lisn.upsaclay.fr/competitions/6351#learn_the_details) held by [HBHA workshop](https://sites.google.com/view/egocentric-hand-body-activity/home?pli=1) at ECCV 2022 .
 
 In this repository, we explore some effective data augmentations to improve the model generalization of 3D human pose and shape estimation from a single egocentric image. 
 
